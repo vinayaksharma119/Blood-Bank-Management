@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EqX-gv-jGP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Request-->
+        <scene sceneID="K6A-aE-tze">
+            <objects>
+                <tableViewController id="7Xd-OC-AAh" customClass="ViewRequestsTableVC" customModule="Blood_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="f3H-sy-WUV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="request" rowHeight="90" id="Gl8-Pz-p5S" customClass="ViewRequestsTableViewCell" customModule="Blood_Bank" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gl8-Pz-p5S" id="DEf-3K-tR5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="lYH-BS-geq">
+                                            <rect key="frame" x="10" y="20" width="394" height="54"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB8-Lp-xqP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="268.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood group required : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-0d-FG4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIG-Sh-eir">
+                                                            <rect key="frame" x="175" y="0.0" width="93.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.329999999999998" id="xIJ-El-86h"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3n-Ck-QPP">
+                                                    <rect key="frame" x="0.0" y="31.5" width="42" height="22.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lYH-BS-geq" secondAttribute="bottom" constant="16" id="052-lK-Hno"/>
+                                        <constraint firstAttribute="trailing" secondItem="lYH-BS-geq" secondAttribute="trailing" constant="10" id="8gx-i2-RLp"/>
+                                        <constraint firstItem="lYH-BS-geq" firstAttribute="leading" secondItem="DEf-3K-tR5" secondAttribute="leading" constant="10" id="9OQ-Kr-ud6"/>
+                                        <constraint firstItem="lYH-BS-geq" firstAttribute="top" secondItem="DEf-3K-tR5" secondAttribute="top" constant="20" id="dLc-ax-LIX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bloodGroup" destination="wIG-Sh-eir" id="q0j-9z-hKt"/>
+                                    <outlet property="details" destination="d3n-Ck-QPP" id="Bwe-DV-o8K"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Xd-OC-AAh" id="jBf-hz-ILV"/>
+                            <outlet property="delegate" destination="7Xd-OC-AAh" id="EY6-Uq-7Xu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="View Request" id="yju-AA-cp8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="YWr-Ci-Lvf"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="uMM-23-Slr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="Hrl-WC-dgg" kind="show" id="Qcf-yN-AGe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="10O-Je-PZB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="7Xd-OC-AAh" eventType="valueChanged" id="k3H-k9-fUw"/>
+                        </connections>
+                    </refreshControl>
+                    <connections>
+                        <segue destination="NO8-ZV-vKc" kind="show" identifier="viewReq" id="j2i-OK-DpM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPi-Pl-THV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4970" y="556"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="Q3D-0B-QeT">
+            <objects>
+                <viewController id="NO8-ZV-vKc" customClass="RequestDetailsVC" customModule="Blood_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iDj-9v-EUv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ik-vY-gN5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i94-Co-yKV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="txu-nP-J4c">
+                                                <rect key="frame" x="8" y="17" width="306" height="100"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="764-8t-GpE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265.5" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blood group required:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV0-OE-XFM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="206" height="50"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFf-ib-LvP">
+                                                                <rect key="frame" x="210" y="0.0" width="55.5" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="55.5" id="ciL-XC-rtt"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="juH-PT-V0I">
+                                                        <rect key="frame" x="0.0" y="50" width="136.5" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted on:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKg-gg-rB4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="82.5" height="50"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwH-z4-hIQ">
+                                                                <rect key="frame" x="86.5" y="0.0" width="50" height="50"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="17"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5b-DH-nHj">
+                                                <rect key="frame" x="8" y="120" width="398" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="a5b-DH-nHj" secondAttribute="bottom" id="6pm-vI-weg"/>
+                                            <constraint firstItem="txu-nP-J4c" firstAttribute="top" secondItem="i94-Co-yKV" secondAttribute="top" constant="17" id="9Mv-UE-qxT"/>
+                                            <constraint firstItem="txu-nP-J4c" firstAttribute="leading" secondItem="i94-Co-yKV" secondAttribute="leading" constant="8" id="JtM-0G-WaQ"/>
+                                            <constraint firstItem="a5b-DH-nHj" firstAttribute="leading" secondItem="i94-Co-yKV" secondAttribute="leading" constant="8" id="WCU-wP-tvp"/>
+                                            <constraint firstAttribute="trailing" secondItem="txu-nP-J4c" secondAttribute="trailing" constant="100" id="ajr-ps-78J"/>
+                                            <constraint firstItem="a5b-DH-nHj" firstAttribute="top" secondItem="txu-nP-J4c" secondAttribute="bottom" constant="3" id="exM-09-0I3"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5b-DH-nHj" secondAttribute="trailing" constant="8" id="lIZ-ok-ixV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i94-Co-yKV" firstAttribute="top" secondItem="6ik-vY-gN5" secondAttribute="top" id="ArL-jm-fRM"/>
+                                    <constraint firstItem="i94-Co-yKV" firstAttribute="bottom" secondItem="6ik-vY-gN5" secondAttribute="bottom" id="IQQ-1f-35l"/>
+                                    <constraint firstItem="i94-Co-yKV" firstAttribute="trailing" secondItem="6ik-vY-gN5" secondAttribute="trailing" id="K2g-m7-Y74"/>
+                                    <constraint firstItem="i94-Co-yKV" firstAttribute="leading" secondItem="6ik-vY-gN5" secondAttribute="leading" id="Pay-u3-bRI"/>
+                                    <constraint firstItem="i94-Co-yKV" firstAttribute="width" secondItem="6ik-vY-gN5" secondAttribute="width" id="uRi-Fh-oAr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="e1y-3t-ePF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="JUU-DX-lSH"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6ik-vY-gN5" firstAttribute="leading" secondItem="GO7-LU-UM6" secondAttribute="leading" id="6kM-Gb-w7C"/>
+                            <constraint firstItem="6ik-vY-gN5" firstAttribute="top" secondItem="GO7-LU-UM6" secondAttribute="top" id="aJe-2K-KAD"/>
+                            <constraint firstItem="6ik-vY-gN5" firstAttribute="bottom" secondItem="GO7-LU-UM6" secondAttribute="bottom" id="tXA-Cy-ya9"/>
+                            <constraint firstItem="6ik-vY-gN5" firstAttribute="trailing" secondItem="GO7-LU-UM6" secondAttribute="trailing" id="xTY-Kj-EZe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GO7-LU-UM6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="kVz-sN-jSg">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="AQv-Gd-ngN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButton:" destination="NO8-ZV-vKc" id="oZ8-v7-z5o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bloodGroupLabel" destination="TFf-ib-LvP" id="pqK-g8-X4P"/>
+                        <outlet property="dateLabel" destination="iwH-z4-hIQ" id="Xod-lt-FCJ"/>
+                        <outlet property="detailLabel" destination="a5b-DH-nHj" id="pve-q7-ibH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZm-1f-Byo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4969.5652173913049" y="1343.9732142857142"/>
+        </scene>
+        <!--Add request-->
+        <scene sceneID="7d7-Bq-ZA9">
+            <objects>
+                <viewController id="Hrl-WC-dgg" customClass="AddReqViewController" customModule="Blood_Bank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vY3-uh-wIR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Blood group" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSU-DO-Fc1">
+                                <rect key="frame" x="30" y="273" width="354" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="kNc-RI-akc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aVD-v9-VNk">
+                                <rect key="frame" x="43.5" y="341" width="327" height="163"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="163" id="mS8-yE-wjo"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaL-9o-ZO6">
+                                <rect key="frame" x="30" y="664" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WYG-Po-PEA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTapped:" destination="Hrl-WC-dgg" eventType="touchUpInside" id="zY0-Ll-hcJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GaL-9o-ZO6" firstAttribute="leading" secondItem="6Nv-WM-Zw5" secondAttribute="leading" constant="30" id="BHM-A4-npi"/>
+                            <constraint firstItem="6Nv-WM-Zw5" firstAttribute="trailing" secondItem="GaL-9o-ZO6" secondAttribute="trailing" constant="30" id="D1T-oU-SnI"/>
+                            <constraint firstItem="6Nv-WM-Zw5" firstAttribute="trailing" secondItem="iSU-DO-Fc1" secondAttribute="trailing" constant="30" id="NLA-4e-c49"/>
+                            <constraint firstItem="GaL-9o-ZO6" firstAttribute="top" secondItem="aVD-v9-VNk" secondAttribute="bottom" constant="160" id="PW5-n0-Lsi"/>
+                            <constraint firstItem="6Nv-WM-Zw5" firstAttribute="bottom" secondItem="GaL-9o-ZO6" secondAttribute="bottom" constant="99" id="dav-py-4jw"/>
+                            <constraint firstItem="6Nv-WM-Zw5" firstAttribute="trailing" secondItem="aVD-v9-VNk" secondAttribute="trailing" constant="43.329999999999998" id="e2t-3B-Ql0"/>
+                            <constraint firstItem="aVD-v9-VNk" firstAttribute="leading" secondItem="6Nv-WM-Zw5" secondAttribute="leading" constant="43.670000000000002" id="gdJ-rF-lhz"/>
+                            <constraint firstItem="aVD-v9-VNk" firstAttribute="top" secondItem="iSU-DO-Fc1" secondAttribute="bottom" constant="34" id="w8K-g5-qdU"/>
+                            <constraint firstItem="iSU-DO-Fc1" firstAttribute="leading" secondItem="6Nv-WM-Zw5" secondAttribute="leading" constant="30" id="z1i-af-qSH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Nv-WM-Zw5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add request" id="J3w-d9-2u4"/>
+                    <connections>
+                        <outlet property="bloodGroup" destination="iSU-DO-Fc1" id="cao-zm-OPh"/>
+                        <outlet property="details" destination="aVD-v9-VNk" id="ruY-ex-NeO"/>
+                        <outlet property="submit" destination="GaL-9o-ZO6" id="5tR-Ae-0wW"/>
+                        <segue destination="Gal-dE-sSQ" kind="unwind" identifier="goToViewReq" unwindAction="unwindToVCWithSegue:" id="jaN-rX-tKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgz-ZW-N4s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Gal-dE-sSQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5754" y="556"/>
+        </scene>
+        <!--View requests-->
+        <scene sceneID="X6s-Hc-kVG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EqX-gv-jGP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="View requests" image="hand.raised" catalog="system" id="edL-Dd-irO"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A8w-QR-Qz5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.25882352939999997" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Xd-OC-AAh" kind="relationship" relationship="rootViewController" id="9vo-jY-u5c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RF-5H-87V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4048" y="556"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.raised" catalog="system" width="128" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
