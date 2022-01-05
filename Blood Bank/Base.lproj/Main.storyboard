@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vLu-yY-1sd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vLu-yY-1sd">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gOB-ol-nZn">
                                 <rect key="frame" x="30" y="616" width="354" height="111"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-ga-Won">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-ga-Won">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LNI-6L-os8"/>
@@ -29,7 +31,7 @@
                                             <segue destination="Idd-i7-evX" kind="show" id="Vv5-6f-1qB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPk-d1-vvb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPk-d1-vvb">
                                         <rect key="frame" x="0.0" y="61" width="354" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="B1S-Ra-FpU"/>
@@ -62,9 +64,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I0S-p8-lE3" firstAttribute="top" secondItem="AOI-Ou-fCf" secondAttribute="bottom" constant="25" id="JVD-Ng-0Jk"/>
+                            <constraint firstItem="gOB-ol-nZn" firstAttribute="top" secondItem="I0S-p8-lE3" secondAttribute="bottom" constant="178.33000000000001" id="JxY-KY-6sJ"/>
                             <constraint firstItem="I0S-p8-lE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jxp-R3-i5b"/>
                             <constraint firstItem="AOI-Ou-fCf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="OF5-hc-xUA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gOB-ol-nZn" secondAttribute="trailing" constant="30" id="Sxo-Fy-TI2"/>
@@ -73,7 +77,6 @@
                             <constraint firstItem="AOI-Ou-fCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="hhh-FR-iD3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AOI-Ou-fCf" secondAttribute="trailing" constant="51.670000000000002" id="z5q-3g-twf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="PC3-7T-cP1"/>
                     <connections>
@@ -136,7 +139,7 @@
                                     <constraint firstAttribute="height" constant="412" id="bJR-Tn-mon"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-a0-l1A">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-a0-l1A">
                                 <rect key="frame" x="30" y="742" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tVC-v1-2fj"/>
@@ -148,7 +151,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="u0i-iZ-5dN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="u0i-iZ-5dN" firstAttribute="trailing" secondItem="Dx5-KP-frp" secondAttribute="trailing" constant="20" id="03H-gT-6Fw"/>
                             <constraint firstItem="u0i-iZ-5dN" firstAttribute="bottom" secondItem="hLU-a0-l1A" secondAttribute="bottom" constant="70" id="AYd-Zf-6UJ"/>
@@ -157,7 +161,6 @@
                             <constraint firstItem="hLU-a0-l1A" firstAttribute="leading" secondItem="u0i-iZ-5dN" secondAttribute="leading" constant="30" id="hsZ-9s-Rer"/>
                             <constraint firstItem="u0i-iZ-5dN" firstAttribute="trailing" secondItem="hLU-a0-l1A" secondAttribute="trailing" constant="30" id="zyq-Go-Gq9"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="u0i-iZ-5dN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="o6C-3m-xuA"/>
                     <connections>
@@ -202,7 +205,7 @@
                                     <constraint firstAttribute="height" constant="93" id="Wl5-oW-2dg"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-zx-nL4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-zx-nL4">
                                 <rect key="frame" x="30" y="557" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="urh-Si-b3k"/>
@@ -214,7 +217,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="97N-86-zmo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="97N-86-zmo" firstAttribute="bottom" secondItem="qL4-zx-nL4" secondAttribute="bottom" constant="255" id="3ML-Py-MZB"/>
                             <constraint firstItem="qL4-zx-nL4" firstAttribute="leading" secondItem="97N-86-zmo" secondAttribute="leading" constant="30" id="PdF-4f-Sbp"/>
@@ -223,7 +227,6 @@
                             <constraint firstItem="97N-86-zmo" firstAttribute="trailing" secondItem="w87-9l-9Nh" secondAttribute="trailing" constant="20" id="ioc-95-oD1"/>
                             <constraint firstItem="97N-86-zmo" firstAttribute="trailing" secondItem="qL4-zx-nL4" secondAttribute="trailing" constant="30" id="xOb-Dt-YNf"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="97N-86-zmo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="CEh-TT-Uli"/>
                     <connections>
@@ -309,12 +312,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oYf-Go-IlI"/>
+        <segue reference="dfg-9i-bVg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="blood-drop" width="512" height="512"/>
         <image name="hand.raised" catalog="system" width="128" height="128"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

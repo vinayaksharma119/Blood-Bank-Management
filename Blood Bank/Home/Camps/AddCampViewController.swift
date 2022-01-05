@@ -143,7 +143,7 @@ class AddCampViewController: UIViewController,UITextViewDelegate,UITextFieldDele
        
         docRef = db.collection("camps").document()
         
-        let dataToSave: [String: Any] = ["Title":title,"Location": city,"Time":Timestamp.init(),"Date": date,"Camp Time": time,"Details":detailsField.text!,"Latitude": latitude!,"Longitude": longitude!,"User id": docRef.documentID,]
+        let dataToSave: [String: Any] = ["title":title,"location": city,"time":Timestamp.init(),"dateOfCamp": date,"campTime": time,"details":detailsField.text!,"latitude": latitude!,"longitude": longitude!,"userId": docRef.documentID,]
         
         
             docRef.setData(dataToSave) { (error) in

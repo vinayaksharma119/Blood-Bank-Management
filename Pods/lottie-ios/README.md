@@ -69,7 +69,7 @@ let package = Package(
        .iOS(.v12),
   ],
   dependencies: [
-    .package(url: "https://github.com/airbnb/lottie-ios.git", from: "3.1.2")
+    .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "3.2.1")
   ],
   targets: [
     .target(name: "YourTestProject", dependencies: ["Lottie"])
@@ -83,6 +83,7 @@ And then import wherever needed: ```import Lottie```
 1. Using Xcode 11 go to File > Swift Packages > Add Package Dependency
 2. Paste the project URL: https://github.com/airbnb/lottie-ios
 3. Click on next and select the project target
+4. Don't forget to set `DEAD_CODE_STRIPPING = NO` in your `Build Settings` (https://bugs.swift.org/plugins/servlet/mobile#issue/SR-11564)
 
 If you have doubts, please, check the following links:
 
@@ -92,3 +93,22 @@ If you have doubts, please, check the following links:
 
 After successfully retrieved the package and added it to your project, just import `Lottie` and you can get the full benefits of it.
 
+-----
+
+### Objective-C Support
+
+As of 3.0 Lottie has been completely rewritten in Swift! 
+
+For Objective-C support please use Lottie 2.5.3. Alternatively an Objective-C branch exists and is still active.
+
+The official objective c branch can be found here:
+
+[Objective-C Branch](https://github.com/airbnb/lottie-ios/tree/lottie/objectiveC)
+
+Also check out the documentation regarding it here: 
+
+[iOS Migration](http://airbnb.io/lottie/#/ios-migration)
+
+### Data collection
+
+The Lottie SDK does not collect any data. We provide this notice to help you fill out [App Privacy Details](https://developer.apple.com/app-store/app-privacy-details/).

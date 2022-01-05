@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import SkeletonView
 
-class CampsTableViewController: UITableViewController {
+class CampsTableViewController: UITableViewController, SkeletonTableViewDataSource {
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -28,7 +29,16 @@ class CampsTableViewController: UITableViewController {
         super.viewDidLoad()
         getData()
         searchBar.delegate = self
+        
+        
         self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.isSkeletonable = true
+        
+        tableView.showAnimatedGradientSkeleton()
     }
     
 
@@ -44,6 +54,10 @@ class CampsTableViewController: UITableViewController {
         else{
            return locationArray.count
         }
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "camps"
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,26 +79,18 @@ class CampsTableViewController: UITableViewController {
         performSegue(withIdentifier: "viewCamps", sender: self)
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-           cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animate(withDuration: 0.3, animations: {
-             cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
-             },completion: { finished in
-                UIView.animate(withDuration: 0.1, animations: {
-                     cell.layer.transform = CATransform3DMakeScale(1,1,1)
-                 })
-         })
-    }
     
     func getData(){
-        self.showAnimation()
+        
         
         db.collection("camps").order(by: "Date",descending: false)
-            .getDocuments { (querySnapshot, err) in
+            .getDocuments {[weak self] (querySnapshot, err) in
+                guard let self = self else {return}
                 if let err = err {
-                    print("Error getting documents: \(err)")
+                    self.presentAlert(withTitle: "Error", message: "\(String(describing: err))")
                 } else {
                     for document in querySnapshot!.documents {
+                        
                         let title = document.data()["Title"]
                         let location = document.data()["Location"]
                         let date = document.data()["Date"]
@@ -93,8 +99,10 @@ class CampsTableViewController: UITableViewController {
                         self.titleArray.append(title as! String)
                         self.locationArray.append(location  as! String)
                         self.dateArray.append(date as! String)
-                        self.removeAnimation()
+                        
                     }
+                    self.tableView.stopSkeletonAnimation()
+                    self.view.hideSkeleton()
                     self.tableView.reloadData()
                 }
         }
@@ -106,27 +114,8 @@ class CampsTableViewController: UITableViewController {
         locationArray.removeAll()
         dateArray.removeAll()
         uid.removeAll()
-        
-        db.collection("camps").order(by: "Date",descending: false)
-        .getDocuments { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let title = document.data()["Title"]
-                        let location = document.data()["Location"]
-                        let date = document.data()["Date"]
-                        let uidd = document.data()["User id"]
-                        self.uid.append(uidd as! String)
-                        self.titleArray.append(title as! String)
-                        self.locationArray.append(location  as! String)
-                        self.dateArray.append(date as! String)
-                        }
-                    self.tableView.reloadWithAnimation()
-                }
-            sender.endRefreshing()
-        }
-       
+        getData()
+        sender.endRefreshing()
     }
 }
 
@@ -150,4 +139,11 @@ extension CampsTableViewController: UISearchBarDelegate{
     }
     
 
+}
+
+struct Camp: Codable {
+    let title: String?
+    let location: String?
+    let dateOfCamp: String?
+    let userId: String?
 }

@@ -114,6 +114,7 @@ extension ViewProfileVC: UITableViewDataSource,UITableViewDelegate{
          else if indexPath.row == 2{
             print("Logout")
             do {
+
                 try Auth.auth().signOut()
 
                 dismiss(animated: true, completion: nil)
@@ -124,7 +125,6 @@ extension ViewProfileVC: UITableViewDataSource,UITableViewDelegate{
             catch let error as NSError {
                 print(error.localizedDescription)
             }
-            
 
         }
         tableView.deselectRow(at: indexPath, animated: true)
