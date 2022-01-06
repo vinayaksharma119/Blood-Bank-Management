@@ -89,17 +89,18 @@ class CampsTableViewController: UITableViewController, SkeletonTableViewDataSour
                 if let err = err {
                     self.presentAlert(withTitle: "Error", message: "\(String(describing: err))")
                 } else {
+                       
                     for document in querySnapshot!.documents {
                         
-                        let title = document.data()["Title"]
-                        let location = document.data()["Location"]
-                        let date = document.data()["Date"]
-                        let uidd = document.data()["User id"]
+                        let title = document.data()["title"]
+                        let location = document.data()["location"]
+                        let date = document.data()["date"]
+                        let uidd = document.data()["userId"]
                         self.uid.append(uidd as! String)
                         self.titleArray.append(title as! String)
                         self.locationArray.append(location  as! String)
                         self.dateArray.append(date as! String)
-                        
+
                     }
                     self.tableView.stopSkeletonAnimation()
                     self.view.hideSkeleton()
@@ -139,11 +140,4 @@ extension CampsTableViewController: UISearchBarDelegate{
     }
     
 
-}
-
-struct Camp: Codable {
-    let title: String?
-    let location: String?
-    let dateOfCamp: String?
-    let userId: String?
 }
