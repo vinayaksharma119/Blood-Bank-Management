@@ -484,7 +484,6 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
-  - SkeletonView (1.26.0)
   - SkyFloatingLabelTextField (3.8.0)
 
 DEPENDENCIES:
@@ -494,7 +493,6 @@ DEPENDENCIES:
   - Firebase/Firestore
   - IQKeyboardManagerSwift
   - lottie-ios
-  - SkeletonView
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
@@ -519,7 +517,6 @@ SPEC REPOS:
     - lottie-ios
     - nanopb
     - PromisesObjC
-    - SkeletonView
     - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
@@ -543,9 +540,8 @@ SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  SkeletonView: 6b62a8ddbc64abb113ea3243e4a9979e5750f147
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
 
-PODFILE CHECKSUM: 933caf87f4673acb517b7898bc6ff94181e07e20
+PODFILE CHECKSUM: 239f028125cf50831a712218c109ae64c72f7d05
 
 COCOAPODS: 1.11.2

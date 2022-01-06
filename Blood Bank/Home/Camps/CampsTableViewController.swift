@@ -8,9 +8,8 @@
 
 import UIKit
 import Firebase
-import SkeletonView
 
-class CampsTableViewController: UITableViewController, SkeletonTableViewDataSource {
+class CampsTableViewController: UITableViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -34,12 +33,6 @@ class CampsTableViewController: UITableViewController, SkeletonTableViewDataSour
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        tableView.isSkeletonable = true
-        
-        tableView.showAnimatedGradientSkeleton()
-    }
     
 
     // MARK: - Table view data source
@@ -56,9 +49,6 @@ class CampsTableViewController: UITableViewController, SkeletonTableViewDataSour
         }
     }
     
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "camps"
-    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "camps") as! CampsTableViewCell
@@ -92,18 +82,16 @@ class CampsTableViewController: UITableViewController, SkeletonTableViewDataSour
                        
                     for document in querySnapshot!.documents {
                         
-                        let title = document.data()["title"]
-                        let location = document.data()["location"]
-                        let date = document.data()["date"]
-                        let uidd = document.data()["userId"]
+                        let title = document.data()[campsFields.title]
+                        let location = document.data()[campsFields.location]
+                        let date = document.data()[campsFields.dateOfCamp]
+                        let uidd = document.data()[campsFields.userId]
                         self.uid.append(uidd as! String)
                         self.titleArray.append(title as! String)
                         self.locationArray.append(location  as! String)
                         self.dateArray.append(date as! String)
 
                     }
-                    self.tableView.stopSkeletonAnimation()
-                    self.view.hideSkeleton()
                     self.tableView.reloadData()
                 }
         }

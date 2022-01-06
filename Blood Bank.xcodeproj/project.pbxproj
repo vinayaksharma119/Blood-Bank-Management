@@ -27,6 +27,7 @@
 		F69352582449DF6B00AA1F56 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69352572449DF6B00AA1F56 /* WelcomeViewController.swift */; };
 		F693525A2449DF7500AA1F56 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69352592449DF7500AA1F56 /* RegisterViewController.swift */; };
 		F693525C2449DF7E00AA1F56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693525B2449DF7E00AA1F56 /* LoginViewController.swift */; };
+		F6A53E4C2786C8D70087910C /* MessageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A53E4B2786C8D70087910C /* MessageFile.swift */; };
 		F6B2D0BF244B321000BB96E9 /* ViewUserReqTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2D0BE244B321000BB96E9 /* ViewUserReqTableVC.swift */; };
 		F6B2D0C1244B33DD00BB96E9 /* ViewReqTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2D0C0244B33DD00BB96E9 /* ViewReqTableViewCell.swift */; };
 		F6C61CE7244A29DE001C49CC /* CampsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C61CE6244A29DE001C49CC /* CampsTableViewController.swift */; };
@@ -68,6 +69,7 @@
 		F69352572449DF6B00AA1F56 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F69352592449DF7500AA1F56 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F693525B2449DF7E00AA1F56 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F6A53E4B2786C8D70087910C /* MessageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFile.swift; sourceTree = "<group>"; };
 		F6B2D0BE244B321000BB96E9 /* ViewUserReqTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUserReqTableVC.swift; sourceTree = "<group>"; };
 		F6B2D0C0244B33DD00BB96E9 /* ViewReqTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewReqTableViewCell.swift; sourceTree = "<group>"; };
 		F6C61CE6244A29DE001C49CC /* CampsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampsTableViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				F686EA532449D41700E4C470 /* AppDelegate.swift */,
 				F686EA552449D41700E4C470 /* SceneDelegate.swift */,
+				F6A53E4A2786C89E0087910C /* Helpers */,
 				F6CC25CF244A050800AA0657 /* Extensions */,
 				F69352562449DF4E00AA1F56 /* Welcome */,
 				F6CC25D8244A1CC300AA0657 /* Home */,
@@ -201,6 +204,14 @@
 				F693525B2449DF7E00AA1F56 /* LoginViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		F6A53E4A2786C89E0087910C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6A53E4B2786C8D70087910C /* MessageFile.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F6CC25CF244A050800AA0657 /* Extensions */ = {
@@ -353,6 +364,7 @@
 				F6C61CEF244A3910001C49CC /* AddReqViewController.swift in Sources */,
 				F6CC25D1244A052D00AA0657 /* DimissKeboard.swift in Sources */,
 				F686EA542449D41700E4C470 /* AppDelegate.swift in Sources */,
+				F6A53E4C2786C8D70087910C /* MessageFile.swift in Sources */,
 				F639AE1A24C9A3FC00D2049B /* MapScreenVC.swift in Sources */,
 				F686EA562449D41700E4C470 /* SceneDelegate.swift in Sources */,
 				F6C61CEB244A3390001C49CC /* ViewRequestsTableVC.swift in Sources */,

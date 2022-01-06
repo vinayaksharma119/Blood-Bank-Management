@@ -36,14 +36,14 @@ class CampDetailsViewController: UIViewController {
             docRef.getDocument(){(document, error) in
                 if let document = document, document.exists{
                     let data = document.data()
-                    self.titleLabel.text = data?["Title"] as? String
-                    self.locationLabel.text = data?["Location"] as? String
-                    self.dateLabel.text = data?["Date"] as? String
-                    self.tileLabel.text = data?["Camp Time"] as? String
-                    self.detailLabel.text = data?["Details"] as? String
-                    let latitude = data?["Latitude"]
+                    self.titleLabel.text = data?[campsFields.title] as? String
+                    self.locationLabel.text = data?[campsFields.location] as? String
+                    self.dateLabel.text = data?[campsFields.dateOfCamp] as? String
+                    self.tileLabel.text = data?[campsFields.campTime] as? String
+                    self.detailLabel.text = data?[campsFields.details] as? String
+                    let latitude = data?[campsFields.latitude]
                     self.fetchLatitude = (latitude as! Double)
-                    let longitude = data?["Longitude"]
+                    let longitude = data?[campsFields.longitude]
                     self.fetchLongitude = (longitude as! Double)
                     self.removeAnimation()
                 } else{

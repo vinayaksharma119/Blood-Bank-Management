@@ -12,7 +12,6 @@ target 'Blood Bank' do
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift'
   pod 'lottie-ios'
-  pod 'SkeletonView'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
 end
 

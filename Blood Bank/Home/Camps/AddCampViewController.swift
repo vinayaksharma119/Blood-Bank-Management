@@ -140,10 +140,19 @@ class AddCampViewController: UIViewController,UITextViewDelegate,UITextFieldDele
         navigationItem.hidesBackButton = true
         self.showAnimation()
         
-       
         docRef = db.collection("camps").document()
         
-        let dataToSave: [String: Any] = ["title":title,"location": city,"time":Timestamp.init(),"dateOfCamp": date,"campTime": time,"details":detailsField.text!,"latitude": latitude!,"longitude": longitude!,"userId": docRef.documentID,]
+        let campTitle = campsFields.title
+        let campLocation = campsFields.location
+        let timeStamp = campsFields.time
+        let campTime = campsFields.campTime
+        let dateOfCamp = campsFields.dateOfCamp
+        let campDetails = campsFields.details
+        let campLatitude = campsFields.latitude
+        let campLongitude = campsFields.longitude
+        let userId = campsFields.userId
+        
+        let dataToSave: [String: Any] = [campTitle:title,campLocation: city,timeStamp:Timestamp.init(),dateOfCamp: date,campTime: time,campDetails:detailsField.text!,campLatitude: latitude!,campLongitude: longitude!,userId: docRef.documentID,]
         
         
             docRef.setData(dataToSave) { (error) in
