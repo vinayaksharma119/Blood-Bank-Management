@@ -52,7 +52,8 @@ class MapScreenVC: UIViewController {
     }
     
     func checkLocationAuthorization(){
-        switch CLLocationManager.authorizationStatus(){
+        let manager = CLLocationManager()
+        switch manager.authorizationStatus{
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
